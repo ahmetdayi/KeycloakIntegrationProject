@@ -1,0 +1,10 @@
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:22.0.5
+    container_name: local-keycloak
+    environment:
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=p@ssw0rD!
+    ports:
+      - "8082:8080"
+    command: start-dev
